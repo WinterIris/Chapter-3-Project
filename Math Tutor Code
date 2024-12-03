@@ -1,29 +1,24 @@
 // The following below is a C++ Program about "Math Tutor" made by Christopher Wilson
 
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <conio.h>
+#include <cstdlib>  
+#include <ctime>    
 
 using namespace std;
 
 int main() {
-	srand(static_cast<unsigned int>(time(0)));
+    srand(static_cast<unsigned int>(time(0)));
 
-	int num1 = rand() % 1000;
-	int num2 = rand() % 1000;
+    int num1 = rand() % 100 + 1;
+    int num2 = rand() % 100 + 1;
+ 
+    cout << "What is " << num1 << " + " << num2 << "?" << endl;
 
-	cout << "What is " << num1 << " + " << num2 << "?" << endl;
-	cout << "Press any key when you are ready to check the correct answer." << endl;
+    cout << "Press Enter when you're ready to check your answer...";
+    cin.get(); 
 
-	while (!_kbhit()) {
+    int correctAnswer = num1 + num2;
+    cout << "The correct answer is: " << correctAnswer << endl;
 
-	}
-
-	_getch();
-
-	int correctAnswer = num1 + num2;
-	cout << num1 << " + " << num2 << " = " << correctAnswer << endl;
-
-	return 0;
+    return 0;
 }
